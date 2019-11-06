@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <link rel="canonical" href="{% static 'css/bootstrap.css' %}">
+    
+   
+    <title>LOGIN</title>
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="bootstrap.css" rel="stylesheet">
+  </head>
+
+ 
+
+  <body class="text-center">
+
+  	<!-- Navbar (sit on top) -->
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">BLUE COLLAR NETWORK</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+    	
+    	<a href="{% url 'home' %}" class="w3-bar-item w3-button">Home</a>
+      <a href="{% url 'login' %}" class="w3-bar-item w3-button">Login</a>
+      <a onclick="myFunction()" class="w3-bar-item w3-button">Register
+    
+      <a href="{% url 'cusreg' %}" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Services</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+ 
+}
+</script>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="/static/images/mason.jpg" alt="BLUECOLLAR JOBS"  width="1600" height="400">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-white w3-xxlarge">BLUE COLLAR JOBS</h1>
+     <h2 class="w3-white ">Highly Tallented Workers on Your Finger Tips</h2>
+  </div>
+</header>
+
+
+</div>
+    <form class="form-signin">
+      
+      <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+    
+    </div>
+
+
+<div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="/static/images/pai1.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="600">
+    </div>
+
+
+
+   <div class="w3-col m4 w3-padding-large">   
+  <br><br>
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</div>
+</form>
+</body>
+</html>

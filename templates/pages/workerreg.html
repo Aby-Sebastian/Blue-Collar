@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+{% load static %}
+<head>
+	<meta charset="utf-8">
+	<title>WorkerRegistration</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reg.css' %}">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+	<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">BLUE COLLAR NETWORK</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="{% url 'home' %}" class="w3-bar-item w3-button">Home</a> 
+      <a href="{% url 'login' %}" class="w3-bar-item w3-button">Login</a>
+      <a href="{% url 'cusreg' %}" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Services</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="/templates/images/mason.jpg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">BLUE COLLAR JOBS</h1>
+  </div>
+</header>
+	<form method="post" action="{% url 'abc' %}">
+		{% csrf_token %}
+		<br><br><h1>WORKER</h1><br><br>
+	<DIV class="container">
+		First Name : <input type="text" name="Firstname" placeholder="Enter Firstname" required><br><br>
+		Middle Name : <input type="text" name="Middlename" placeholder="Enter Middlename"><br><br>
+		Last Name : <input type="text" name="Lastname" placeholder= "Enter Lastname" required><br><br>
+		Email Id : <input type="email" name="EmailId" placeholder="Enter email" class="form-control" required autofocus><br><br>
+		Phone Number : <input type="text" name="PhNo" placeholder="Enter Phonenumber" required><br><br>
+		Place : <input type="text" name="Place" placeholder="Enter Location" required><br><br>
+		Password : <input type="password" name="Password" placeholder="password" required><br><br>
+		Confirm Password : <input type="password" name="Password" placeholder="password" required><br><br>
+		<input type="submit" name="Register" value="submit" class="registerbtn">
+
+	</DIV>
+	</form>
+</body>
+</html>
